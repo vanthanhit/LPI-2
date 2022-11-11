@@ -115,6 +115,9 @@ vi /etc/nginx/conf.d/kbuor.website.conf (replace kbuor.website by your domain)
  # Install MySQL 8.0 on CentOS 7
  yum localinstall https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm -y
  yum install mysql-community-server -y
+ # import key if key failer
+  rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
+
  systemctl enable mysqld
  systemctl start mysqld
  
